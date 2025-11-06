@@ -1,0 +1,32 @@
+[
+  {
+    "id": "r1",
+    "question": "I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?",
+    "answer": "echo",
+    "category": "classic"
+  },
+  {
+    "id": "r2",
+    "question": "I\u2019m tall when I\u2019m young and short when I\u2019m old. What am I?",
+    "answer": "candle",
+    "category": "classic"
+  },
+  {
+    "id": "r3",
+    "question": "What has keys but can't open locks?",
+    "answer": "piano",
+    "category": "fun"
+  },
+  {
+    "id": "r4",
+    "question": "What can run but never walks, has a mouth but never talks?",
+    "answer": "river",
+    "category": "nature"
+  },
+  {
+    "id": "r5",
+    "question": "What gets wetter the more it dries?",
+    "answer": "towel",
+    "category": "classic"
+  }
+]

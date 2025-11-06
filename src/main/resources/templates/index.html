@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RiddleMaster</title>
+</head>
+<body>
+<h1>RiddleMaster</h1>
+<div>
+  <form action="/check" method="post" th:object="${riddle}">
+    <p th:text="${riddle.question}">Riddle goes here</p>
+    <input type="hidden" name="id" th:value="${riddle.id}"/>
+    <input name="attempt" placeholder="Your answer"/>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div>
+  <h3>Top Scores</h3>
+  <ul>
+    <li th:each="e : ${top}" th:text="${e.name} + ' - ' + ${e.score}">Name - Score</li>
+  </ul>
+</div>
+</body>
+</html>

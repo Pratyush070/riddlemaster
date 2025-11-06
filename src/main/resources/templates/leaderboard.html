@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Leaderboard</title></head>
+<body>
+<h1>Leaderboard</h1>
+<ol>
+  <li th:each="e : ${top}" th:text="${e.name} + ' - ' + ${e.score} + ' (' + ${e.at} + ')'">Entry</li>
+</ol>
+<a href="/">Back</a>
+</body>
+</html>

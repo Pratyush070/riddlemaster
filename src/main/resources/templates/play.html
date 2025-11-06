@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Result</title></head>
+<body>
+<h2 th:text="${result} ? 'Correct!' : 'Wrong!'"></h2>
+<p>Riddle: <span th:text="${riddle.question}"></span></p>
+<p>Your answer: <span th:text="${attempt}"></span></p>
+
+<div>
+  <form action="/save" method="post">
+    <input name="name" placeholder="Your name to save score"/>
+    <input type="hidden" name="score" value="10" />
+    <button type="submit">Save Score</button>
+  </form>
+</div>
+
+<a href="/">Play again</a>
+</body>
+</html>

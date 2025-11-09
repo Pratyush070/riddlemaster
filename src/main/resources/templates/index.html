@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>RiddleMaster</title>
+  <meta charset="UTF-8">
+  <title>RiddleMaster 🧩</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <script th:src="@{/js/script.js}" defer></script>
 </head>
 <body>
-<h1>RiddleMaster</h1>
-<div>
-  <form action="/check" method="post" th:object="${riddle}">
-    <p th:text="${riddle.question}">Riddle goes here</p>
-    <input type="hidden" name="id" th:value="${riddle.id}"/>
-    <input name="attempt" placeholder="Your answer"/>
-    <button type="submit">Submit</button>
-  </form>
-</div>
+  <div class="container">
+    <h1 class="title">🧠 RiddleMaster</h1>
+    
+    <div class="card">
+      <h2 th:text="${riddle.question}"></h2>
 
-<div>
-  <h3>Top Scores</h3>
-  <ul>
-    <li th:each="e : ${top}" th:text="${e.name} + ' - ' + ${e.score}">Name - Score</li>
-  </ul>
-</div>
+      <form method="post" action="/submit">
+        <input type="text" name="answer" placeholder="Type your answer..." required>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <p th:text="${result}" class="result"></p>
+
+      <div class="actions">
+        <a href="/" class="btn secondary">Next Riddle</a>
+        <a href="/leaderboard" class="btn tertiary">🏆 View Leaderboard</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
